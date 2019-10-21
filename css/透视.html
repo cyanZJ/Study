@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 300px;
+            background-color: lightcyan;
+        }
+        div {
+            width: 10px;
+            height: 10px;
+            margin: auto;
+            /* transition: all 2s; */
+            background-color: limegreen;
+            transform: translateZ(0px);
+
+        }
+        div:hover {
+            transform: translateX(100px);
+        }
+        img {
+            display: block;
+            margin: auto;
+            width: 100px;
+            transition: all 1s;
+        }
+        img:hover {
+            transform: rotateZ(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <img src="C:\Users\86152\Pictures\Saved Pictures\timg.jpg" alt="">
+</body>
+</html>

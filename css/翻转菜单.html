@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 4000px;
+            
+        }
+        .box {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            /* border: 2px dashed limegreen; */
+            transition: all .5s;
+            border-radius:4px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+        }
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+        .item {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            border-radius:4px;
+            color: linen;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .item:first-child {
+            background-color: rgb(35, 190, 35);
+            transform: translateZ(50px);
+        }
+
+
+
+        .item:last-child {
+            background-color: rgb(36, 139, 170);
+            transform: translateZ(50px) rotateX(-90deg);
+            margin-top: 50px;
+        }
+
+        .box:hover .item:last-child {
+            margin-top: 0;
+            transform: translateZ(0) rotateX(-90deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">惊喜</div>
+        <div class="item">肉肉</div>
+    </div>
+</body>
+</html>

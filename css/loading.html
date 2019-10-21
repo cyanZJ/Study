@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .out {
+            overflow: hidden;
+            width: 300px;
+
+        }
+        .in {
+            position: relative;
+            width:300px;
+            height: 150px;
+            border: 4px solid #ddd;
+            box-sizing: border-box;
+            /* overflow: hidden; */
+        }
+        span {
+            position: absolute;
+        }
+        span:nth-child(1) {
+            top: -4px;
+            left: -4px;
+            width: 300px;
+            height: 4px;
+            background: -webkit-linear-gradient(right, rgb(71, 172, 71), rgb(182, 223, 182));
+            animation: circleOne 2s linear infinite;
+        }   
+     
+        span:nth-child(2) {
+            top: -4px;
+            right: -4px;
+            width: 4px;
+            height: 150px;
+            background: -webkit-linear-gradient(bottom, rgb(71, 172, 71), rgb(182, 223, 182));
+            animation: circleTwo 2s linear infinite ;
+            animation-delay: 1s;
+        }       
+         span:nth-child(3) {
+            bottom: -4px;
+            left: -4px;
+            width: 300px;
+            height: 4px;
+            background: -webkit-linear-gradient(left, rgb(71, 172, 71), rgb(182, 223, 182));
+            animation: circleThree 2s linear infinite ;
+
+        }        
+        span:nth-child(4) {
+            top: -4px;
+            left: -4px;
+            width: 4px;
+            height: 150px;
+            background: -webkit-linear-gradient(top, rgb(71, 172, 71), rgb(182, 223, 182));
+            animation: circleFour 2s linear infinite ;
+            animation-delay: 1s;
+        }
+        @keyframes circleOne {
+            0%{
+                transform: translateX(-100%);
+            }
+            100%{
+                transform: translateX(100%);
+            }
+        }
+        @keyframes circleTwo {
+            0%{
+                transform: translateY(-100%);
+            }
+            100%{
+                transform: translateY(100%);
+            }
+        }
+        @keyframes circleThree {
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+        @keyframes circleFour {
+            0%{
+                transform: translateY(100%);
+            }
+            100%{
+                transform: translateY(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <div class="in">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>

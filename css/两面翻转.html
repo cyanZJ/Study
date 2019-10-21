@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+        .box {
+            position: relative;
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            border: 2px dashed lightcoral;
+            border-radius: 10px;
+            transition: all 2s;
+            transform-style: preserve-3d;
+        }
+        div[class^="rotate"] {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -100px 0 0 -100px;
+            color:white;
+            text-align: center;
+            line-height: 200px;
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        div .rotate1 {
+            background-color: lightsalmon;
+            z-index: 1;
+
+        }
+        div .rotate2 {
+            background-color:cadetblue;
+            transform: rotateY(180deg);
+        }
+        .box:hover {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="rotate1">你给我等着!</div>
+        <div class="rotate2">有匪</div>
+    </div>
+</body>
+</html>

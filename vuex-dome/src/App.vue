@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>{{$store.state.counter}}</div>
+    <input type="button" value="+" @click="add">
+    <input type="button" value="-" @click="reduce">
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+  },
+  data(){
+    return{
+      num:0
+    }
+  },
+  methods:{
+    add(){
+      this.$store.dispatch('add');
+    },
+    reduce(){
+      this.$store.dispatch('reduce');
+    }
   }
 }
 </script>
@@ -23,6 +35,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
